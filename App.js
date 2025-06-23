@@ -1,14 +1,14 @@
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React from 'react';
 import LoginForm from './components/LoginForm';
+import InfoList from './components/InfoList';
 
 function App() {
-    const handleLogin = () => {
-        alert('🔥 Logged in!');
-    };
+    const [loggedIn, setLoggedIn] = useState(false); // стейт входу
 
     return (
         <>
+            {/* Фон */}
             <div
                 style={{
                     backgroundImage: "url('/bonfiredarksouls.jpg')",
@@ -24,9 +24,13 @@ function App() {
                 }}
             ></div>
 
+            {/* Контент */}
             <div style={{ position: "relative", zIndex: 1, color: "#fff", padding: "20px" }}>
-
-                <LoginForm onLogin={handleLogin} />
+                {loggedIn ? (
+                    <InfoList /> // якщо ввійшов — показати босів
+                ) : (
+                    <LoginForm onLogin={() => setLoggedIn(true)} /> // форма входу
+                )}
             </div>
         </>
     );

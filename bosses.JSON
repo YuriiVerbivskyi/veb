@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Iudex Gundyr",
+    "image": "/gundyr.jpg",
+    "lore": "The unkindled's first trial, risen as a gatekeeper of the Flame."
+  },
+  {
+    "id": 2,
+    "name": "Vordt of the Boreal Valley",
+    "image": "/vordt.jpg",
+    "lore": "An icy beast blocking the road to Lothric."
+  },
+  {
+    "id": 3,
+    "name": "Abyss Watchers",
+    "image": "/watchers.jpg",
+    "lore": "Farron's undead legion doomed to fight themselves to resist the Abyss."
+  },
+  {
+    "id": 4,
+    "name": "Deacons of the Deep",
+    "image": "/deacons.jpg",
+    "lore": "A collective of clerics who worship the deep dark."
+  },
+  {
+    "id": 5,
+    "name": "High Lord Wolnir",
+    "image": "/wolnir.jpg",
+    "lore": "A skeletal tyrant dragged into the Abyss."
+  },
+  {
+    "id": 6,
+    "name": "Pontiff Sulyvahn",
+    "image": "/pontiff.jpg",
+    "lore": "The cruel ruler of Irithyll, wielding twin blades and shadow."
+  },
+  {
+    "id": 7,
+    "name": "Aldrich, Devourer of Gods",
+    "image": "/aldrich.jpg",
+    "lore": "Once a cleric, now a sludge of divine remains."
+  },
+  {
+    "id": 8,
+    "name": "Yhorm the Giant",
+    "image": "/yhorm.jpg",
+    "lore": "A Lord of Cinder with a tragic burden."
+  },
+  {
+    "id": 9,
+    "name": "Dancer of the Boreal Valley",
+    "image": "/dancer.jpg",
+    "lore": "A corrupted swordmaster guarding the path to the castle."
+  },
+  {
+    "id": 10,
+    "name": "Dragonslayer Armour",
+    "image": "/dragonslayer.jpg",
+    "lore": "Haunted armor of a dragonslayer defending the archives."
+  },
+  {
+    "id": 11,
+    "name": "Lorian and Lothric, Twin Princes",
+    "image": "/lothric.jpg",
+    "lore": "The crippled prince and his brother who reject their duty to the Flame."
+  },
+  {
+    "id": 13,
+    "name": "Nameless King",
+    "image": "/nameless_king.jpg",
+    "lore": "Once heir to Gwyn, the god of war who sided with dragons. Cast out, he returns wielding storm and death from above."
+  }
+]
