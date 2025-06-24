@@ -1,10 +1,15 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React from 'react';
+import React, { useState } from 'react';
 import LoginForm from './components/LoginForm';
+import InfoList from './components/InfoList';
+import Quiz from './components/Quiz';
 
 function App() {
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [showQuiz, setShowQuiz] = useState(false);
+
     const handleLogin = () => {
-        alert('🔥 Logged in!');
+        setIsLoggedIn(true);
     };
 
     return (
@@ -25,8 +30,20 @@ function App() {
             ></div>
 
             <div style={{ position: "relative", zIndex: 1, color: "#fff", padding: "20px" }}>
-
-                <LoginForm onLogin={handleLogin} />
+                {!isLoggedIn ? (
+                    <LoginForm onLogin={handleLogin} />
+                ) : (
+                    <>
+                        <h2 className="text-center mb-4">🔥 Dark Souls III Bosses</h2>
+                        <button
+                            className="btn btn-outline-light mb-3"
+                            onClick={() => setShowQuiz(!showQuiz)}
+                        >
+                            {showQuiz ? "Hide Quiz" : "Take the Boss Quiz"}
+                        </button>
+                        {showQuiz ? <Quiz /> : <InfoList />}
+                    </>
+                )}
             </div>
         </>
     );
