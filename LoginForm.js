@@ -1,53 +1,67 @@
 import React, { useState } from 'react';
-import { Form, Button, Card } from 'react-bootstrap';
+import { Form, Button, Alert, Card } from 'react-bootstrap';
 
 function LoginForm({ onLogin }) {
     const [email, setEmail] = useState('');
-    const [pass, setPass] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        if (!email || !pass) {
-            alert("🔥 Please enter your Sign and Password of Flame.");
+        if (!email || !password) {
+            setError('🔥 You must enter both email and password to proceed, Unkindled.');
             return;
         }
-
-        // якщо все ок — викликаємо логін
+        setError('');
         onLogin();
     };
 
     return (
-        <Card style={{ backgroundColor: '#111', color: '#eee', maxWidth: '400px', margin: 'auto' }}>
-            <Card.Body>
-                <h3 className="mb-4 text-center">🔥 Bonfire Login</h3>
-                <Form onSubmit={handleSubmit}>
-                    <Form.Group className="mb-3">
-                        <Form.Label>Sign (Email)</Form.Label>
-                        <Form.Control
-                            type="email"
-                            placeholder="chosen@undead.com"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                        />
-                    </Form.Group>
+        <div className="d-flex justify-content-center align-items-center vh-100">
+            <Card style={{
+                width: '24rem',
+                backgroundColor: 'rgba(28, 28, 28, 0.6)',
+                color: '#f0e6d2',
+                border: '1px solid #444',
+                backdropFilter: 'blur(6px)'
+            }}>
+                <Card.Body>
+                    <Card.Title className="text-center mb-4" style={{ fontFamily: 'Cinzel, serif' }}>
+                        🔥 Bonfire Login
+                    </Card.Title>
 
-                    <Form.Group className="mb-3">
-                        <Form.Label>Password of Flame</Form.Label>
-                        <Form.Control
-                            type="password"
-                            placeholder="••••••"
-                            value={pass}
-                            onChange={(e) => setPass(e.target.value)}
-                        />
-                    </Form.Group>
+                    {error && <Alert variant="danger">{error}</Alert>}
 
-                    <Button variant="outline-light" type="submit" className="w-100">
-                        Link the Flame
-                    </Button>
-                </Form>
-            </Card.Body>
-        </Card>
+                    <Form onSubmit={handleSubmit}>
+                        <Form.Group className="mb-3">
+                            <Form.Label>Sign (Email)</Form.Label>
+                            <Form.Control
+                                type="email"
+                                placeholder="chosen@undead.com"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                style={{ backgroundColor: '#2c2c2c', color: '#f0e6d2' }}
+                            />
+                        </Form.Group>
+
+                        <Form.Group className="mb-3">
+                            <Form.Label>Password of Flame</Form.Label>
+                            <Form.Control
+                                type="password"
+                                placeholder="******"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                style={{ backgroundColor: '#2c2c2c', color: '#f0e6d2' }}
+                            />
+                        </Form.Group>
+
+                        <Button variant="outline-light" type="submit" className="w-100">
+                            Link the Flame
+                        </Button>
+                    </Form>
+                </Card.Body>
+            </Card>
+        </div>
     );
 }
 
