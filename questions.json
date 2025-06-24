@@ -1,0 +1,27 @@
+[
+  {
+    "question": "Which boss is fought alongside his crippled brother, casting sorceries while teleporting?",
+    "options": ["Soul of Cinder", "Lothric & Lorian", "Abyss Watchers", "Nameless King"],
+    "answer": "Lothric & Lorian"
+  },
+  {
+    "question": "Which boss uses twin blades and summons a phantom clone to fight with him?",
+    "options": ["Pontiff Sulyvahn", "Yhorm the Giant", "Dancer of the Boreal Valley", "Vordt"],
+    "answer": "Pontiff Sulyvahn"
+  },
+  {
+    "question": "Which boss slowly transformed into a sludge-like being by devouring gods?",
+    "options": ["Aldrich", "Deacons of the Deep", "Wolnir", "Sister Friede"],
+    "answer": "Aldrich"
+  },
+  {
+    "question": "Which boss fight features a crowd of clerics and requires targeting a specific one?",
+    "options": ["Deacons of the Deep", "Pontiff Sulyvahn", "Watchers", "Vordt"],
+    "answer": "Deacons of the Deep"
+  },
+  {
+    "question": "Which boss fight is a duel among a legion cursed to fight each other forever?",
+    "options": ["Abyss Watchers", "Lothric & Lorian", "Soul of Cinder", "Deacons of the Deep"],
+    "answer": "Abyss Watchers"
+  }
+]
